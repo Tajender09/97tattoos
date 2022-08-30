@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/97tattoos/static/css/main.9cd270e3.css",
-    "main.js": "/97tattoos/static/js/main.f9d2f6f7.js",
+    "main.js": "/97tattoos/static/js/main.0531ad2e.js",
     "static/media/intro.mp4": "/97tattoos/static/media/intro.a73e2b90f2a3f98a014c.mp4",
     "static/media/logo.PNG": "/97tattoos/static/media/logo.e4c91d3ade9c9d54f5ab.PNG",
     "index.html": "/97tattoos/index.html",
     "main.9cd270e3.css.map": "/97tattoos/static/css/main.9cd270e3.css.map",
-    "main.f9d2f6f7.js.map": "/97tattoos/static/js/main.f9d2f6f7.js.map"
+    "main.0531ad2e.js.map": "/97tattoos/static/js/main.0531ad2e.js.map"
   },
   "entrypoints": [
     "static/css/main.9cd270e3.css",
-    "static/js/main.f9d2f6f7.js"
+    "static/js/main.0531ad2e.js"
   ]
 }
