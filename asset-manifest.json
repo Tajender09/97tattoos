@@ -1,15 +1,33 @@
 {
   "files": {
     "main.css": "/97tattoos/static/css/main.9cd270e3.css",
-    "main.js": "/97tattoos/static/js/main.624a3323.js",
+    "main.js": "/97tattoos/static/js/main.55b6a70c.js",
     "static/media/intro.mp4": "/97tattoos/static/media/intro.a73e2b90f2a3f98a014c.mp4",
-    "static/media/logo.PNG": "/97tattoos/static/media/logo.e4c91d3ade9c9d54f5ab.PNG",
+    "static/media/pet2.jpg": "/97tattoos/static/media/pet2.ea12695a16903247c841.jpg",
+    "static/media/flower.jpg": "/97tattoos/static/media/flower.886f4e5503299aa8015c.jpg",
+    "static/media/flower3.JPG": "/97tattoos/static/media/flower3.51fa6e7377f7f1f04769.JPG",
+    "static/media/large.jpg": "/97tattoos/static/media/large.6e96748a51dcd1f0f2b1.jpg",
+    "static/media/religious2.jpg": "/97tattoos/static/media/religious2.96db4324c1c9e2ea31c8.jpg",
+    "static/media/couple.JPG": "/97tattoos/static/media/couple.995ba7dc059be1b25cb1.JPG",
+    "static/media/flower2.JPG": "/97tattoos/static/media/flower2.cc51e3185a108b7cb029.JPG",
+    "static/media/custom4.jpg": "/97tattoos/static/media/custom4.61c91c707a32ff611fb8.jpg",
+    "static/media/custom2.jpg": "/97tattoos/static/media/custom2.89a25a2a8c72244ef2ce.jpg",
+    "static/media/custom.jpg": "/97tattoos/static/media/custom.b74beac0d388c9f0b90f.jpg",
+    "static/media/pet.jpg": "/97tattoos/static/media/pet.c3ef74948b05dfb68674.jpg",
+    "static/media/religious.JPG": "/97tattoos/static/media/religious.acd244a5d25c3e8e9efb.JPG",
+    "static/media/small.jpg": "/97tattoos/static/media/small.3224bcc9113b9f223c86.jpg",
+    "static/media/text.JPG": "/97tattoos/static/media/text.837ebb5543528b28e9cb.JPG",
+    "static/media/custom3.jpg": "/97tattoos/static/media/custom3.e08512c49044fe8de3dc.jpg",
+    "static/media/name.jpg": "/97tattoos/static/media/name.3a63b6b5a38becaa74fe.jpg",
+    "static/media/custom1.jpg": "/97tattoos/static/media/custom1.0600d5a63049e30ade5a.jpg",
+    "static/media/white-logo.PNG": "/97tattoos/static/media/white-logo.f9618c63be61391bf94d.PNG",
+    "static/media/logo.png": "/97tattoos/static/media/logo.1438758d2769cc30e806.png",
     "index.html": "/97tattoos/index.html",
     "main.9cd270e3.css.map": "/97tattoos/static/css/main.9cd270e3.css.map",
-    "main.624a3323.js.map": "/97tattoos/static/js/main.624a3323.js.map"
+    "main.55b6a70c.js.map": "/97tattoos/static/js/main.55b6a70c.js.map"
   },
   "entrypoints": [
     "static/css/main.9cd270e3.css",
-    "static/js/main.624a3323.js"
+    "static/js/main.55b6a70c.js"
   ]
 }
