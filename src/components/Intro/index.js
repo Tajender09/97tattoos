@@ -1,0 +1,74 @@
+import React from "react";
+import intro from "../../Assets/Videos/intro.mp4";
+import styled from "styled-components/macro";
+import { Col, Row, Button } from "react-bootstrap";
+
+const Intro = () => {
+  return (
+    <Row className="justify-content-between align-items-center my-5">
+      <Col md={5}>
+        <p
+          css={`
+            font-size: 3rem;
+            font-family: "Poppins", sans-serif;
+            line-height: 62px;
+          `}
+        >
+          <span
+            css={`
+              font-weight: bolder !important;
+            `}
+          >
+            97 Tattoos
+          </span>
+          <br />
+          Get{" "}
+          <span
+            css={`
+              font-weight: bolder !important;
+            `}
+          >
+            15%
+          </span>{" "}
+          off on your birthday tattoo!
+        </p>
+        <Button className="px-4 py-2 mt-3 mb-5" variant="outline-dark">
+          Checkout More
+        </Button>
+      </Col>
+      <Col md={7}>
+        <VideoHolder>
+          <video
+            css={`
+              border-radius: 25px;
+              width: 100%;
+            `}
+            autoPlay={true}
+            muted={true}
+            playsInline={true}
+            loop={true}
+            src={intro}
+          />
+        </VideoHolder>
+      </Col>
+    </Row>
+  );
+};
+
+export default Intro;
+
+const VideoHolder = styled.div`
+  position: relative;
+
+  :after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    border-radius: 25px;
+    opacity: 0.2;
+  }
+`;
