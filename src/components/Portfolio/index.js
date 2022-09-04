@@ -23,19 +23,19 @@ const Portfolio = () => {
     },
     {
       image: Name,
-      name: "Name Tattoo",
+      name: "Script Tattoo",
     },
     {
       image: Pet,
-      name: "Pet Tattoo",
+      name: "Animal Tattoo",
     },
     {
       image: Couple,
-      name: "Couple Tattoo",
+      name: "Couple Tattoos",
     },
     {
       image: Custom2,
-      name: "Custom Tattoo",
+      name: "Realism Tattoo",
     },
   ];
   const settings = {
@@ -91,6 +91,8 @@ const Portfolio = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
+          nextArrow: <></>,
+          prevArrow: <></>,
         },
       },
     ],
@@ -102,7 +104,7 @@ const Portfolio = () => {
         css={`
           font-size: 2.5rem;
           font-family: "Poppins", sans-serif;
-          font-weight: bold;
+          font-weight: bold !important;
         `}
       >
         Our Previous Work
@@ -123,6 +125,7 @@ const Portfolio = () => {
             <div
               css={`
                 border-radius: 25px;
+                outline: none;
               `}
               key={item.name}
             >
@@ -134,7 +137,7 @@ const Portfolio = () => {
                 alt={item.name}
                 className="w-100 h-100"
               />
-              <h4 className="text-center">{item.name}</h4>
+              <h4 css={`font-family: 'Poppins', sans-serif; font-weight: bold;`} className="text-center mt-2">{item.name}</h4>
             </div>
           );
         })}

@@ -33,67 +33,67 @@ const PortfolioView = () => {
       {
         id: Math.random(),
         image: Name,
-        name: "Name Tattoo",
+        name: "Script Tattoo",
       },
       {
         id: Math.random(),
         image: Pet,
-        name: "Pet Tattoo",
+        name: "Minimal Tattoo",
       },
       {
         id: Math.random(),
         image: Couple,
-        name: "Couple Tattoo",
+        name: "Couple Tattoos",
       },
       {
         id: Math.random(),
         image: Custom2,
-        name: "Custom Tattoo",
+        name: "Realism Tattoo",
       },
       {
         id: Math.random(),
         image: Custom3,
-        name: "Custom Tattoo 2",
+        name: "Armband Tattoo",
       },
       {
         id: Math.random(),
         image: Text,
-        name: "Text Tattoo",
+        name: "Script Tattoo",
       },
       {
         id: Math.random(),
         image: Religious2,
-        name: "Religious Tattoo 2",
+        name: "Religious Tattoo",
       },
       {
         id: Math.random(),
         image: Flower,
-        name: "Flower Tattoo",
+        name: "Minimal Tattoo",
       },
       {
         id: Math.random(),
         image: Pet2,
-        name: "Pet Tattoo 2",
+        name: "Minimal Tattoo",
       },
       {
         id: Math.random(),
         image: Flower2,
-        name: "Flower Tattoo 2",
+        name: "Minimal Tattoo",
       },
       {
         id: Math.random(),
         image: Custom4,
-        name: "Custom Tattoo 3",
+        name: "Minimal Tattoo",
       },
       {
         id: Math.random(),
         image: Flower3,
-        name: "Flower Tattoo 3",
+        name: "Minimal Tattoo",
       },
       {
         id: Math.random(),
         image: Custom5,
-        name: "Custom Tattoo 4",
+        name: "Travel Tattoo",
       },
   ];
   return (
@@ -121,6 +121,7 @@ const PortfolioView = () => {
                 css={`
                   width: 100%;
                   height: 100%;
+                  border-radius: 25px;
                 `}
                 fluid
               />
@@ -136,9 +137,8 @@ const PortfolioView = () => {
 export default PortfolioView;
 
 const ProductHeading = styled.h4`
-  color: #777;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   margin-top: 10px;
 `;

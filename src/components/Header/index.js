@@ -30,14 +30,14 @@ function Header() {
               <NavSpan>About Us</NavSpan>
             </Nav.Link>
             <NavDropdown title={<NavSpan>Tattoo Categories</NavSpan>} id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
+              <NavDropdown.Item as={Link} to="/categories=Animal Tattoo">Animal Tattoo</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/categories=Couple Tattoos">
+                Couple Tattoos
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/categories=Minimal Tattoo">Minimal Tattoo</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item as={Link} to="/categories">
+                Explore More
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>

@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import intro from "../../Assets/Videos/intro.mp4";
 import styled from "styled-components/macro";
 import { Col, Row, Button } from "react-bootstrap";
+import ConsultationModal from "../ConsultationModal";
 
 const Intro = () => {
+  const [show, setShow] = useState(false);
   return (
+    <>
     <Row className="justify-content-between align-items-center my-5">
       <Col md={5}>
         <p
@@ -28,11 +31,11 @@ const Intro = () => {
               font-weight: bolder !important;
             `}
           >
-            15%
+            25%
           </span>{" "}
           off on your birthday tattoo!
         </p>
-        <Button className="px-4 py-2 mt-3 mb-5" variant="outline-dark">
+        <Button className="px-4 py-2 mt-3 mb-5" variant="outline-dark" onClick={()=> setShow(true)}>
           Checkout More
         </Button>
       </Col>
@@ -52,6 +55,8 @@ const Intro = () => {
         </VideoHolder>
       </Col>
     </Row>
+    <ConsultationModal show={show} />
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import {
   FaTwitter,
   FaChevronRight,
   FaRegCopyright,
-  FaChevronUp
+  FaChevronUp,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -28,7 +28,7 @@ const Footer = () => {
         `}
       >
         <Row className="mb-4">
-          <Col lg={4} class="first">
+          <Col lg={4} className="first">
             <Link to="/97tattoos">
               <img
                 src={logo}
@@ -43,7 +43,7 @@ const Footer = () => {
               Connect with us on Social Media!
             </p>
             <p
-              class="social"
+              className="social"
               css={`
                 a {
                   margin-top: 20px;
@@ -210,7 +210,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col lg={2} class="call">
+          <Col lg={2} className="call">
             <h6
               css={`
                 font-size: 12px;
@@ -251,7 +251,7 @@ const Footer = () => {
               +91 77278 61557
             </a>
           </Col>
-          <Col lg={2} class="mail">
+          <Col lg={2} className="mail">
             <h6
               css={`
                 font-size: 12px;
@@ -289,7 +289,7 @@ const Footer = () => {
                 }
               `}
             >
-              97tattoos@gmail.com
+              info@97tattoos.com
             </a>
             <br />
             <a
@@ -310,7 +310,7 @@ const Footer = () => {
               97tattoos@gmail.com
             </a>
           </Col>
-          <Col lg={2} class="visit">
+          <Col lg={2} className="visit">
             <h6
               css={`
                 font-size: 12px;
@@ -350,7 +350,12 @@ const Footer = () => {
             </p>
           </Col>
         </Row>
-        <div css={`border-top: 1px solid #888;`} className="d-flex justify-content-between align-items-center flex-wrap py-4">
+        <div
+          css={`
+            border-top: 1px solid #888;
+          `}
+          className="d-flex justify-content-between align-items-center flex-wrap py-4"
+        >
           <p
             css={`
               font-size: 14px;
@@ -358,7 +363,11 @@ const Footer = () => {
           >
             Copyright <FaRegCopyright /> 2022, 97 Tattoo Studio.
           </p>
-          <div css={`position: relative;`}>
+          <div
+            css={`
+              position: relative;
+            `}
+          >
             <p
               css={`
                 font-size: 14px;
@@ -366,18 +375,6 @@ const Footer = () => {
             >
               All rights reserved
             </p>
-            {/* <span onClick={()=> window.scrollTo(0, 0)} css={`
-                  position: absolute;
-                  color: #fff;
-                  border: 2px solid #fff;
-                  padding: 5px 10px;
-                  border-radius: 50%;
-                  right: -3rem;
-                  bottom: 10px;
-                  cursor: pointer;
-            `}>
-            <FaChevronUp />
-            </span> */}
           </div>
         </div>
       </Container>

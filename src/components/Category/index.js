@@ -1,0 +1,86 @@
+import React, { useState, useEffect } from "react";
+import { Col, Container, Row, Image, Button } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import Slider from "react-slick";
+import "styled-components/macro";
+
+const Category = () => {
+  const { name } = useParams();
+  const [category, setCategory] = useState([]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          nextArrow: <></>,
+          prevArrow: <></>,
+        },
+      },
+    ],
+  };
+  useEffect(() => {
+    fetch(
+      "https://tattoos-aeb9f-default-rtdb.asia-southeast1.firebasedatabase.app/categories.json"
+    )
+      .then((res) => res.json())
+      .then((resp) =>
+        setCategory(resp.filter((item) => item.name === name)[0])
+      );
+  }, [name]);
+  return (
+    <Container className="my-5">
+      <Row className="align-items-center">
+        <Col md={6}>
+          <Slider
+            {...settings}
+            css={`
+              .slick-list {
+                margin: 0 -5px;
+              }
+              .slick-slide > div {
+                padding: 0 5px;
+              }
+            `}
+          >
+            {category?.images?.map((item, index) => {
+              return (
+                <div
+                  css={`
+                    border-radius: 25px;
+                  `}
+                  key={index}
+                >
+                  <Image
+                    css={`
+                      border-radius: 25px;
+                    `}
+                    src={item}
+                    alt={name}
+                    className="w-100"
+                    fluid
+                  />
+                </div>
+              );
+            })}
+          </Slider>
+        </Col>
+        <Col md={1} className="my-4" />
+        <Col md={5}>
+          <p css={`font-family: 'Poppins', sans-serif; font-size: 50px; @media (max-width: 480px) {font-size: 25px;}`}>Get the best deals on <span className="fw-bold">{name}</span>!</p>
+          <p css={`font-family: 'Poppins', sans-serif; font-size: 16px; color: grey;`}>{category?.description}</p>
+          <Button variant="outline-dark">Checkout</Button>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Category;
