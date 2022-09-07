@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import "styled-components/macro";
 
 function ConsultationModal(props) {
   const [show, setShow] = useState(false);
@@ -20,11 +21,14 @@ function ConsultationModal(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     let obj = {
-      name, email, number, category
+      name,
+      email,
+      number,
+      category,
     };
     console.warn(obj);
     handleClose();
-  }
+  };
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -40,6 +44,12 @@ function ConsultationModal(props) {
                 placeholder="Full Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                css={`
+                  :focus {
+                    box-shadow: 0 0 0 0.25rem #a9a9a9 !important;
+                    border-color: #a9a9a9 !important;
+                  }
+                `}
                 required
                 autoFocus
               />
@@ -51,6 +61,12 @@ function ConsultationModal(props) {
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                css={`
+                  :focus {
+                    box-shadow: 0 0 0 0.25rem #a9a9a9 !important;
+                    border-color: #a9a9a9 !important;
+                  }
+                `}
                 required
               />
             </Form.Group>
@@ -61,6 +77,12 @@ function ConsultationModal(props) {
                 placeholder="Mobile Number"
                 value={number}
                 onChange={(e) => setNumber(e.target.value)}
+                css={`
+                  :focus {
+                    box-shadow: 0 0 0 0.25rem #a9a9a9 !important;
+                    border-color: #a9a9a9 !important;
+                  }
+                `}
                 required
               />
             </Form.Group>

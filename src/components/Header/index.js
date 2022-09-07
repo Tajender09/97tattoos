@@ -16,7 +16,7 @@ function Header() {
             alt="97 Tattoos"
             loading="lazy"
             css={`
-              width: 170px;
+              width: 65px;
             `}
           />
         </Navbar.Brand>
