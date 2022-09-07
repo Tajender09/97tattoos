@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/97tattoos/static/css/main.9cd270e3.css",
-    "main.js": "/97tattoos/static/js/main.92e39cec.js",
+    "main.js": "/97tattoos/static/js/main.c3430e05.js",
     "static/media/intro.mp4": "/97tattoos/static/media/intro.a73e2b90f2a3f98a014c.mp4",
     "static/media/pet2.jpg": "/97tattoos/static/media/pet2.ea12695a16903247c841.jpg",
     "static/media/flower.jpg": "/97tattoos/static/media/flower.886f4e5503299aa8015c.jpg",
@@ -21,13 +21,13 @@
     "static/media/name.jpg": "/97tattoos/static/media/name.3a63b6b5a38becaa74fe.jpg",
     "static/media/custom1.jpg": "/97tattoos/static/media/custom1.0600d5a63049e30ade5a.jpg",
     "static/media/white-logo.PNG": "/97tattoos/static/media/white-logo.f9618c63be61391bf94d.PNG",
-    "static/media/logo.png": "/97tattoos/static/media/logo.1438758d2769cc30e806.png",
+    "static/media/logo.png": "/97tattoos/static/media/logo.e4c91d3ade9c9d54f5ab.png",
     "index.html": "/97tattoos/index.html",
     "main.9cd270e3.css.map": "/97tattoos/static/css/main.9cd270e3.css.map",
-    "main.92e39cec.js.map": "/97tattoos/static/js/main.92e39cec.js.map"
+    "main.c3430e05.js.map": "/97tattoos/static/js/main.c3430e05.js.map"
   },
   "entrypoints": [
     "static/css/main.9cd270e3.css",
-    "static/js/main.92e39cec.js"
+    "static/js/main.c3430e05.js"
   ]
 }
