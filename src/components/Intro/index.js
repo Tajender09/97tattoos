@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import intro from "../../Assets/Videos/intro.mp4";
+import vid from "../../Assets/Videos/vid.mp4";
 import styled from "styled-components/macro";
 import { Col, Row, Button } from "react-bootstrap";
 import ConsultationModal from "../ConsultationModal";
@@ -59,7 +60,7 @@ const Intro = () => {
               muted={true}
               playsInline={true}
               loop={true}
-              src={intro}
+              src={vid}
             />
           </VideoHolder>
         </Col>

@@ -16,7 +16,7 @@ function ConsultationModal(props) {
 
   useEffect(() => {
     setShow(props.show);
-  }, [props]);
+  }, [props.num]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

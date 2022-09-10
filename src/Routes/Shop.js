@@ -1,10 +1,19 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components/macro";
 import large from "../Assets/Images/products/large.jpg";
 import small from "../Assets/Images/products/small.jpg";
+import ConsultationModal from "../components/ConsultationModal";
 
 const Shop = () => {
+  const [show, setShow] = useState(false);
+  const [num, setNum] = useState(0);
+  
+  const modalHandler = () => {
+    setShow(true);
+    setNum(Math.random());
+  };
+
   const products = [
     {
       id: Math.random(),
@@ -41,21 +50,61 @@ const Shop = () => {
               `}
               md={4}
             >
-              <img
-                src={item.image}
-                alt={item.name}
+              <div
                 css={`
-                  width: 100%;
-                  height: 100%;
-                  border-radius: 25px; 
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  overflow: hidden;
+                  :before {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    border-radius: 25px;
+                    background-color: white;
+                    opacity: 0;
+                    transition: opacity 0.4s;
+                  }
+                  :hover:before {
+                    opacity: 0.2;
+                  }
+                  :hover button {
+                    margin-top: 0;
+                  }
                 `}
-              />
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  css={`
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 25px;
+                  `}
+                />
+                <Button
+                  variant="dark"
+                  css={`
+                    margin-top: 30rem;
+                    position: absolute;
+                    transition: margin 0.5s;
+                  `}
+                  onClick={modalHandler}
+                >
+                  Checkout
+                </Button>
+              </div>
               <ProductHeading>{item.name}</ProductHeading>
               <ProductPrice>{item.price}</ProductPrice>
             </Col>
           );
         })}
       </Row>
+      <ConsultationModal show={show} num={num} />
     </Container>
   );
 };

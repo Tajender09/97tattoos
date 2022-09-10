@@ -3,10 +3,20 @@ import { Col, Container, Row, Image, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import "styled-components/macro";
+import ConsultationModal from "../ConsultationModal";
 
 const Category = () => {
   const { name } = useParams();
   const [category, setCategory] = useState([]);
+
+  const [show, setShow] = useState(false);
+  const [num, setNum] = useState(0);
+  
+  const modalHandler = () => {
+    setShow(true);
+    setNum(Math.random());
+  };
+
 
   const settings = {
     dots: true,
@@ -76,9 +86,10 @@ const Category = () => {
         <Col md={5}>
           <p css={`font-family: 'Poppins', sans-serif; font-size: 50px; @media (max-width: 480px) {font-size: 25px;}`}>Get the best deals on <span className="fw-bold">{name}</span>!</p>
           <p css={`font-family: 'Poppins', sans-serif; font-size: 16px; color: grey;`}>{category?.description}</p>
-          <Button variant="outline-dark">Checkout</Button>
+          <Button variant="outline-dark" onClick={modalHandler}>Checkout</Button>
         </Col>
       </Row>
+      <ConsultationModal show={show} num={num} />
     </Container>
   );
 };

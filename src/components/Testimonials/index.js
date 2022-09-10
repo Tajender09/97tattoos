@@ -1,26 +1,77 @@
 import React from "react";
 import "styled-components/macro";
 import Slider from "react-slick";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 const Testimonials = () => {
   const data = [
     {
       avatar:
-        "https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg?w=2000",
-      name: "Rohit Kumar",
+        "https://i.postimg.cc/XvwpP5Rx/B0-B0509-E-7-E92-474-A-8-B88-04405268-FBE1-Varsha-Pathak.jpg",
+      name: "Varsha Pathak",
       review:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "It was my first tattoo and I must say my tattoo artist was fantastic, by his nature and as well his work. Will be visiting again there for my next tattoo😊😊😊",
     },
     {
       avatar:
-        "https://image.shutterstock.com/image-photo/head-shot-portrait-close-smiling-260nw-1714666150.jpg",
-      name: "Shyam Sharma",
+        "https://i.postimg.cc/j5PQZCcr/IMG-20210926-WA0017-Aditya-Bhartiya.jpg",
+      name: "Aditya Maurya",
       review:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.",
+        "You made my first tattoo experience a great one, and I am so very thankful.",
+    },
+    {
+      avatar:
+        "https://i.postimg.cc/nV1qzywT/Screenshot-20220908-233305-Chhavi-Gyanani.jpg",
+      name: "Chhavi Gyanani",
+      review:
+        "I had 4 tattoo from 97tattoo,n this is the best experience I ever had ,the quality of piece is beyond my expectations, the way Jai bhaiya treats their customers!! Absolutely amazing.",
+    },
+    {
+      avatar:
+        "https://i.postimg.cc/vZCVkbc8/Screenshot-2022-09-08-23-39-00-261-com-miui-gallery-Lavina-Jaswani.jpg",
+      name: "Lavina💕",
+      review:
+        "Amazing work 😍 \nTalented artist 💕\nTheyy made my first tattoo experience memorable 🥺❤",
     },
   ];
+  const settings = {
+    slidesToShow: 1,
+    prevArrow: (
+      <MdArrowBackIos
+        css={`
+          color: black;
+          width: 2rem;
+          height: 2rem;
+          :hover {
+            color: black;
+          }
+        `}
+      />
+    ),
+    nextArrow: (
+      <MdArrowForwardIos
+        css={`
+          width: 2rem;
+          height: 2rem;
+          color: black;
+          :hover {
+            color: black;
+          }
+        `}
+      />
+    ),
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          nextArrow: <></>,
+          prevArrow: <></>,
+        },
+      },
+    ],
+  };
   return (
-    <>
+    <div className="mb-5">
       <h1
         className="my-5"
         css={`
@@ -31,9 +82,21 @@ const Testimonials = () => {
       >
         What Client's Say
       </h1>
-      <div className="d-flex justify-content-center" css={`margin-top: 50px;`}>
-        <div className="w-50">
-          <Slider>
+      <div
+        className="d-flex justify-content-center"
+        css={`
+          margin-top: 50px;
+        `}
+      >
+        <div
+          css={`
+            width: 50%;
+            @media (max-width: 480px) {
+              width: 100%;
+            }
+          `}
+        >
+          <Slider {...settings}>
             {data.map((item) => {
               return (
                 <div
@@ -47,22 +110,41 @@ const Testimonials = () => {
                   <img
                     src={item.avatar}
                     css={`
-                      height: 120px;
-                      width: 120px;
-                      border-radius: 50%;
+                      height: 500px;
+                      width: 420px;
+                      border-radius: 25px;
                       border: 1px solid lightgray;
                       padding: 7px;
+
+                      @media (max-width: 992px) {
+                        width: 100%;
+                      }
                     `}
                   />
-                  <p css={`color: grey;`}>{item.review}</p>
-                  <h5 css={`font-family: poppins; font-weight: bold; margin-top: 25px;`}>{item.name}</h5>
+                  <p
+                    css={`
+                      color: grey;
+                      margin-top: 5px;
+                    `}
+                  >
+                    {item.review}
+                  </p>
+                  <h5
+                    css={`
+                      font-family: poppins;
+                      font-weight: bold;
+                      margin: 10px 0;
+                    `}
+                  >
+                    {item.name}
+                  </h5>
                 </div>
               );
             })}
           </Slider>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

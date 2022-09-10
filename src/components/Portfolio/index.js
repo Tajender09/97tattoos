@@ -45,28 +45,6 @@ const Portfolio = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    prevArrow: (
-      <BsChevronLeft
-        css={`
-          color: black;
-          border: 1px solid white;
-          :hover {
-            color: black;
-          }
-        `}
-      />
-    ),
-    nextArrow: (
-      <BsChevronRight
-        css={`
-          color: black;
-          border: 1px solid white;
-          :hover {
-            color: black;
-          }
-        `}
-      />
-    ),
     responsive: [
       {
         breakpoint: 1024,
@@ -83,6 +61,7 @@ const Portfolio = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          dots: true,
         },
       },
       {
@@ -91,8 +70,7 @@ const Portfolio = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
-          nextArrow: <></>,
-          prevArrow: <></>,
+          dots: true,
         },
       },
     ],
@@ -137,7 +115,15 @@ const Portfolio = () => {
                 alt={item.name}
                 className="w-100 h-100"
               />
-              <h4 css={`font-family: 'Poppins', sans-serif; font-weight: bold;`} className="text-center mt-2">{item.name}</h4>
+              <h4
+                css={`
+                  font-family: "Poppins", sans-serif;
+                  font-weight: bold;
+                `}
+                className="text-center mt-2"
+              >
+                {item.name}
+              </h4>
             </div>
           );
         })}

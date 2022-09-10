@@ -28,7 +28,15 @@ const Footer = () => {
         `}
       >
         <Row className="mb-4">
-          <Col lg={4} className="first">
+          <Col
+            lg={4}
+            className="first"
+            css={`
+              @media (max-width: 992px) {
+                text-align: center;
+              }
+            `}
+          >
             <Link to="/97tattoos">
               <img
                 src={logo}
@@ -39,8 +47,8 @@ const Footer = () => {
               />
             </Link>
             <p className="my-4">
-              We provide a full range of false ceiling and acoustical solutions.
-              Connect with us on Social Media!
+              We have the best tattoo artist to help you get a perfect creative
+              custom tattoo which is uniquely designed based on your ideas.
             </p>
             <p
               className="social"
@@ -105,7 +113,15 @@ const Footer = () => {
               </a>
             </p>
           </Col>
-          <Col lg={2}>
+          <Col
+            lg={2}
+            css={`
+              @media (max-width: 992px) {
+                text-align: center;
+                margin-top: 2rem;
+              }
+            `}
+          >
             <h6
               css={`
                 font-size: 12px;
@@ -121,7 +137,8 @@ const Footer = () => {
             <ul
               css={`
                 list-style: none;
-                padding-left: 2rem;
+                display: inline-block;
+                text-align: left;
               `}
             >
               <li
@@ -210,7 +227,16 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col lg={2} className="call">
+          <Col
+            lg={2}
+            className="call"
+            css={`
+              @media (max-width: 992px) {
+                text-align: center;
+                margin-top: 2rem;
+              }
+            `}
+          >
             <h6
               css={`
                 font-size: 12px;
@@ -228,6 +254,13 @@ const Footer = () => {
                   width: 70%;
                   background: rgba(255, 255, 255, 0.1);
                   height: 1px;
+                }
+
+                @media (max-width: 992px) {
+                  :before {
+                    width: 50%;
+                    left: 25%;
+                  }
                 }
               `}
             >
@@ -251,7 +284,16 @@ const Footer = () => {
               +91 77278 61557
             </a>
           </Col>
-          <Col lg={2} className="mail">
+          <Col
+            lg={2}
+            className="mail"
+            css={`
+              @media (max-width: 992px) {
+                text-align: center;
+                margin-top: 2rem;
+              }
+            `}
+          >
             <h6
               css={`
                 font-size: 12px;
@@ -269,6 +311,13 @@ const Footer = () => {
                   width: 70%;
                   background: rgba(255, 255, 255, 0.1);
                   height: 1px;
+                }
+
+                @media (max-width: 992px) {
+                  :before {
+                    width: 50%;
+                    left: 25%;
+                  }
                 }
               `}
             >
@@ -310,7 +359,16 @@ const Footer = () => {
               97tattoos@gmail.com
             </a>
           </Col>
-          <Col lg={2} className="visit">
+          <Col
+            lg={2}
+            className="visit"
+            css={`
+              @media (max-width: 992px) {
+                text-align: center;
+                margin-top: 2rem;
+              }
+            `}
+          >
             <h6
               css={`
                 font-size: 12px;
@@ -328,6 +386,13 @@ const Footer = () => {
                   width: 70%;
                   background: rgba(255, 255, 255, 0.1);
                   height: 1px;
+                }
+
+                @media (max-width: 992px) {
+                  :before {
+                    width: 50%;
+                    left: 25%;
+                  }
                 }
               `}
             >
@@ -353,6 +418,10 @@ const Footer = () => {
         <div
           css={`
             border-top: 1px solid #888;
+
+            @media (max-width: 371px) {
+              justify-content: center !important;
+            }
           `}
           className="d-flex justify-content-between align-items-center flex-wrap py-4"
         >
