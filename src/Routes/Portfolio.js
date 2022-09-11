@@ -17,84 +17,83 @@ import Flower3 from "../Assets/Images/portfolio/flower3.JPG";
 import Pet2 from "../Assets/Images/portfolio/pet2.jpg";
 import Custom5 from "../Assets/Images/portfolio/custom3.jpg";
 
-
 const PortfolioView = () => {
   const projects = [
     {
-        id: Math.random(),
-        image: Custom1,
-        name: "Animal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Religious,
-        name: "Religious Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Name,
-        name: "Script Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Pet,
-        name: "Minimal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Couple,
-        name: "Couple Tattoos",
-      },
-      {
-        id: Math.random(),
-        image: Custom2,
-        name: "Realism Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Custom3,
-        name: "Armband Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Text,
-        name: "Script Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Religious2,
-        name: "Religious Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Flower,
-        name: "Minimal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Pet2,
-        name: "Minimal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Flower2,
-        name: "Minimal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Custom4,
-        name: "Minimal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Flower3,
-        name: "Minimal Tattoo",
-      },
-      {
-        id: Math.random(),
-        image: Custom5,
-        name: "Travel Tattoo",
-      },
+      id: Math.random(),
+      image: Custom1,
+      name: "Animal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Religious,
+      name: "Religious Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Name,
+      name: "Script Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Pet,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Couple,
+      name: "Couple Tattoos",
+    },
+    {
+      id: Math.random(),
+      image: Custom2,
+      name: "Realism Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Custom3,
+      name: "Armband Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Text,
+      name: "Script Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Religious2,
+      name: "Religious Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Flower,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Pet2,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Flower2,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Custom4,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Flower3,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Custom5,
+      name: "Travel Tattoo",
+    },
   ];
   return (
     <Container className="text-center mb-5">
@@ -103,6 +102,8 @@ const PortfolioView = () => {
           font-size: 32px;
           line-height: 44px;
           letter-spacing: 19px;
+          font-family: "Nunito";
+          font-weight: bolder;
         `}
       >
         PREVIOUS WORK
@@ -110,11 +111,7 @@ const PortfolioView = () => {
       <Row>
         {projects.map((item) => {
           return (
-            <Col
-              key={item.id}
-              className="mt-5 mb-3"
-              md={4}
-            >
+            <Col key={item.id} className="mt-5 mb-3" md={4}>
               <Image
                 src={item.image}
                 alt={item.name}

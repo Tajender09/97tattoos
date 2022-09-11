@@ -8,7 +8,7 @@ import ConsultationModal from "../components/ConsultationModal";
 const Shop = () => {
   const [show, setShow] = useState(false);
   const [num, setNum] = useState(0);
-  
+
   const modalHandler = () => {
     setShow(true);
     setNum(Math.random());
@@ -35,6 +35,8 @@ const Shop = () => {
           font-size: 32px;
           line-height: 44px;
           letter-spacing: 19px;
+          font-family: "Nunito";
+          font-weight: bolder;
         `}
       >
         SHOP

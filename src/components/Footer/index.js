@@ -9,8 +9,7 @@ import {
   FaPinterestP,
   FaTwitter,
   FaChevronRight,
-  FaRegCopyright,
-  FaChevronUp,
+  FaRegCopyright
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -324,7 +323,7 @@ const Footer = () => {
               write
             </h6>
             <a
-              href="mailto:97tattoos@gmail.com"
+              href="mailto:info@97tattoos.com"
               css={`
                 text-decoration: none;
                 color: #888;

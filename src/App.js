@@ -15,8 +15,10 @@ function App() {
   const [show, setShow] = useState(false);
   const [num, setNum] = useState(0);
   useEffect(() => {
-    setShow(true);
-    setNum(Math.random());
+    setTimeout(() => {
+      setShow(true);
+      setNum(Math.random());
+    }, 2000);
   }, []);
 
   return (

@@ -45,6 +45,8 @@ const Portfolio = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: <></>,
+    prevArrow: <></>,
     responsive: [
       {
         breakpoint: 1024,

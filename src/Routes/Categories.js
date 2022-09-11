@@ -20,6 +20,8 @@ const Categories = () => {
           font-size: 32px;
           line-height: 44px;
           letter-spacing: 19px;
+          font-family: "Nunito";
+          font-weight: bolder;
 
           @media (max-width: 400px) {
             letter-spacing: 12px;
@@ -39,7 +41,12 @@ const Categories = () => {
               `}
               md={4}
             >
-              <Link to={`/categories=${item.name}`} css={`text-decoration: none !important;`}>
+              <Link
+                to={`/categories=${item.name}`}
+                css={`
+                  text-decoration: none !important;
+                `}
+              >
                 <Image
                   src={item.images[0]}
                   alt={item.name}
