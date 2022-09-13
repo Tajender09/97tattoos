@@ -41,7 +41,7 @@ const Footer = () => {
                 src={logo}
                 alt="97 Tattoos"
                 css={`
-                  width: 170px;
+                  width: 70px;
                 `}
               />
             </Link>

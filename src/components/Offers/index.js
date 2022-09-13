@@ -28,6 +28,7 @@ const Offers = () => {
             @media (min-width: 768px) and (max-width: 991px) {
               padding-left: 0 !important;
               padding-right: 0 !important;
+              height: 500px !important;
             }
           `}
         >
@@ -45,6 +46,11 @@ const Offers = () => {
                 borderTopLeftRadius: "25px",
                 borderTopRightRadius: "25px",
               }}
+              css={`
+                @media (min-width: 768px) and (max-width: 991px) {
+                  height: 400px !important;
+                }
+              `}
               alt="Offer"
               fluid
             />
@@ -68,13 +74,14 @@ const Offers = () => {
           md={4}
           css={`
             height: 600px;
-            
+
             @media (max-width: 768px) {
               margin-top: 20px;
             }
             @media (min-width: 768px) and (max-width: 991px) {
               padding-left: 0 !important;
               padding-right: 0 !important;
+              height: 500px !important;
             }
           `}
         >
@@ -92,6 +99,11 @@ const Offers = () => {
                 borderTopLeftRadius: "25px",
                 borderTopRightRadius: "25px",
               }}
+              css={`
+                @media (min-width: 768px) and (max-width: 991px) {
+                  height: 400px !important;
+                }
+              `}
               alt="Offer"
               fluid
             />
@@ -115,13 +127,13 @@ const Offers = () => {
           css={`
             height: 600px;
 
-            
             @media (max-width: 768px) {
               margin-top: 20px;
             }
             @media (min-width: 768px) and (max-width: 991px) {
               padding-left: 0 !important;
               padding-right: 0 !important;
+              height: 500px !important;
             }
           `}
         >
@@ -139,6 +151,11 @@ const Offers = () => {
                 borderTopLeftRadius: "25px",
                 borderTopRightRadius: "25px",
               }}
+              css={`
+                @media (min-width: 768px) and (max-width: 991px) {
+                  height: 400px !important;
+                }
+              `}
               alt="Offer"
               fluid
             />

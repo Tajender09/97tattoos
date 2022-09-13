@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import intro from "../../Assets/Videos/intro.mp4";
 import vid from "../../Assets/Videos/vid.mp4";
 import styled from "styled-components/macro";
 import { Col, Row, Button } from "react-bootstrap";

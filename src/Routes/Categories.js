@@ -38,6 +38,10 @@ const Categories = () => {
               className="my-5"
               css={`
                 height: 400px;
+
+                @media (min-width: 768px) and (max-width: 1000px) {
+                  height: 230px !important;
+                }
               `}
               md={4}
             >
