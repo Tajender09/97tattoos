@@ -16,7 +16,7 @@ function Header() {
             alt="97 Tattoos"
             loading="lazy"
             css={`
-              width: 65px;
+              width: 55px;
             `}
           />
         </Navbar.Brand>
@@ -29,12 +29,19 @@ function Header() {
             <Nav.Link as={Link} to="/about">
               <NavSpan>About Us</NavSpan>
             </Nav.Link>
-            <NavDropdown title={<NavSpan>Tattoo Categories</NavSpan>} id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/categories/Animal Tattoo">Animal Tattoo</NavDropdown.Item>
+            <NavDropdown
+              title={<NavSpan>Tattoo Categories</NavSpan>}
+              id="basic-nav-dropdown"
+            >
+              <NavDropdown.Item as={Link} to="/categories/Animal Tattoo">
+                Animal Tattoo
+              </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/categories/Couple Tattoos">
                 Couple Tattoos
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/categories/Minimal Tattoo">Minimal Tattoo</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/categories/Minimal Tattoo">
+                Minimal Tattoo
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/categories">
                 Explore More
