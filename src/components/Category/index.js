@@ -11,12 +11,14 @@ const Category = () => {
 
   const [show, setShow] = useState(false);
   const [num, setNum] = useState(0);
-  
+
   const modalHandler = () => {
     setShow(true);
     setNum(Math.random());
   };
 
+  // Geomatric Category
+  // The popularity of the geometric tattoo is not a mere trend thing – these tattoos hold great behind behind the simple lines and shapes. These tattoos only look simple, even though their composition holds great beauty. Geometric tattoos draw their simplicity from the use of common shapes – lines, circles squares, triangles. However, these simple shapes joint together form beautiful and intricate patterns that adorn so many tattoo lovers around the world.
 
   const settings = {
     dots: true,
@@ -45,6 +47,8 @@ const Category = () => {
         setCategory(resp.filter((item) => item.name === name)[0])
       );
   }, [name]);
+  // https://i.postimg.cc/d3LX2VPW/IMG-8733.jpg
+  // https://i.postimg.cc/VkhfYNKF/IMG-1811.jpg
   return (
     <Container className="my-5">
       <Row className="align-items-center">
@@ -84,9 +88,29 @@ const Category = () => {
         </Col>
         <Col md={1} className="my-4" />
         <Col md={5}>
-          <p css={`font-family: 'Poppins', sans-serif; font-size: 50px; @media (max-width: 480px) {font-size: 25px;}`}>Get the best deals on <span className="fw-bold">{name}</span>!</p>
-          <p css={`font-family: 'Poppins', sans-serif; font-size: 16px; color: grey;`}>{category?.description}</p>
-          <Button variant="outline-dark" onClick={modalHandler}>Checkout</Button>
+          <p
+            css={`
+              font-family: "Poppins", sans-serif;
+              font-size: 50px;
+              @media (max-width: 480px) {
+                font-size: 25px;
+              }
+            `}
+          >
+            Get the best deals on <span className="fw-bold">{name}</span>!
+          </p>
+          <p
+            css={`
+              font-family: "Poppins", sans-serif;
+              font-size: 16px;
+              color: grey;
+            `}
+          >
+            {category?.description}
+          </p>
+          <Button variant="outline-dark" onClick={modalHandler}>
+            Checkout
+          </Button>
         </Col>
       </Row>
       <ConsultationModal show={show} num={num} />

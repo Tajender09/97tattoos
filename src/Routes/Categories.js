@@ -46,7 +46,7 @@ const Categories = () => {
               md={4}
             >
               <Link
-                to={`/categories=${item.name}`}
+                to={`/categories/${item.name}`}
                 css={`
                   text-decoration: none !important;
                 `}

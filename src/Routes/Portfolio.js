@@ -21,6 +21,11 @@ const PortfolioView = () => {
   const projects = [
     {
       id: Math.random(),
+      image: Flower,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
       image: Custom1,
       name: "Animal Tattoo",
     },
@@ -46,6 +51,11 @@ const PortfolioView = () => {
     },
     {
       id: Math.random(),
+      image: Pet2,
+      name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
       image: Custom2,
       name: "Realism Tattoo",
     },
@@ -61,23 +71,13 @@ const PortfolioView = () => {
     },
     {
       id: Math.random(),
-      image: Religious2,
-      name: "Religious Tattoo",
-    },
-    {
-      id: Math.random(),
-      image: Flower,
-      name: "Minimal Tattoo",
-    },
-    {
-      id: Math.random(),
-      image: Pet2,
-      name: "Minimal Tattoo",
-    },
-    {
-      id: Math.random(),
       image: Flower2,
       name: "Minimal Tattoo",
+    },
+    {
+      id: Math.random(),
+      image: Religious2,
+      name: "Religious Tattoo",
     },
     {
       id: Math.random(),
@@ -86,13 +86,13 @@ const PortfolioView = () => {
     },
     {
       id: Math.random(),
-      image: Flower3,
-      name: "Minimal Tattoo",
+      image: Custom5,
+      name: "Travel Tattoo",
     },
     {
       id: Math.random(),
-      image: Custom5,
-      name: "Travel Tattoo",
+      image: Flower3,
+      name: "Minimal Tattoo",
     },
   ];
   return (

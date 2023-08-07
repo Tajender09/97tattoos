@@ -10,7 +10,7 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} to="/97tattoos">
+        <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
             alt="97 Tattoos"
@@ -30,11 +30,11 @@ function Header() {
               <NavSpan>About Us</NavSpan>
             </Nav.Link>
             <NavDropdown title={<NavSpan>Tattoo Categories</NavSpan>} id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/categories=Animal Tattoo">Animal Tattoo</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/categories=Couple Tattoos">
+              <NavDropdown.Item as={Link} to="/categories/Animal Tattoo">Animal Tattoo</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/categories/Couple Tattoos">
                 Couple Tattoos
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/categories=Minimal Tattoo">Minimal Tattoo</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/categories/Minimal Tattoo">Minimal Tattoo</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/categories">
                 Explore More

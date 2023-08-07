@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
-  FaPinterestP,
-  FaTwitter,
+  FaWhatsapp,
   FaChevronRight,
-  FaRegCopyright
+  FaRegCopyright,
 } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
               }
             `}
           >
-            <Link to="/97tattoos">
+            <Link to="/">
               <img
                 src={logo}
                 alt="97 Tattoos"
@@ -54,20 +54,24 @@ const Footer = () => {
               css={`
                 a {
                   margin-top: 20px;
-                  padding: 13px 16px 15px;
+                  padding: 13px;
                   font-size: 13px;
                   text-align: center;
+                  display: inline-flex;
+                  justify-content: center;
+                  align-items: center;
                   border-radius: 50%;
                   color: #fff;
                   border: 1px solid rgba(255, 255, 255, 0.1);
                   margin-right: 10px;
-                  transition: color 0.7s;
-                  transition: border-color 0.7s;
+                  transition: all 0.7s;
                 }
               `}
             >
               <a
                 href="https://www.facebook.com/profile.php?id=100083721346954"
+                target="_blank"
+                rel="noreferrer"
                 css={`
                   :hover {
                     color: #4267b2;
@@ -78,7 +82,9 @@ const Footer = () => {
                 <FaFacebookF />
               </a>
               <a
-                href="https://instagram.com/97_tattoos_jpr/"
+                href="https://instagram.com/97tattoosjaipur?igshid=NTc4MTIwNjQ2YQ=="
+                target="_blank"
+                rel="noreferrer"
                 css={`
                   :hover {
                     color: #bc2a8d;
@@ -89,7 +95,22 @@ const Footer = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://pin.it/5kDAGyC"
+                href="https://wa.me/7727861557"
+                target="_blank"
+                rel="noreferrer"
+                css={`
+                  :hover {
+                    color: #25d366;
+                    border-color: #25d366;
+                  }
+                `}
+              >
+                <FaWhatsapp />
+              </a>
+              <a
+                href="mailto:97tattoos@gmail.com"
+                target="_blank"
+                rel="noreferrer"
                 css={`
                   :hover {
                     color: #e60023;
@@ -97,18 +118,7 @@ const Footer = () => {
                   }
                 `}
               >
-                <FaPinterestP />
-              </a>
-              <a
-                href="https://twitter.com/"
-                css={`
-                  :hover {
-                    color: #1da1f2;
-                    border-color: #1da1f2;
-                  }
-                `}
-              >
-                <FaTwitter />
+                <FiMail />
               </a>
             </p>
           </Col>
@@ -156,7 +166,7 @@ const Footer = () => {
                       color: #fff;
                     }
                   `}
-                  to="/97tattoos"
+                  to="/"
                 >
                   Home
                 </Link>
@@ -429,7 +439,7 @@ const Footer = () => {
               font-size: 14px;
             `}
           >
-            Copyright <FaRegCopyright /> 2022, 97 Tattoo Studio.
+            Copyright <FaRegCopyright /> 2023, 97 Tattoo Studio.
           </p>
           <div
             css={`

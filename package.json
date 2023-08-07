@@ -1,7 +1,6 @@
 {
   "name": "97tatoos",
   "version": "0.1.0",
-  "homepage": "https://tajender09.github.io/97tattoos",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",

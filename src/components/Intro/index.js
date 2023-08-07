@@ -30,15 +30,14 @@ const Intro = () => {
               97 Tattoos
             </span>
             <br />
-            Get{" "}
+            Get best deals on{" "}
             <span
               css={`
                 font-weight: bolder !important;
               `}
             >
-              25%
-            </span>{" "}
-            off on your birthday tattoo!
+              customized tattoos!
+            </span>
           </p>
           <Button
             className="px-4 py-2 mt-3 mb-5"

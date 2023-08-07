@@ -21,7 +21,7 @@ const Testimonials = () => {
     },
     {
       avatar:
-        "https://i.postimg.cc/nV1qzywT/Screenshot-20220908-233305-Chhavi-Gyanani.jpg",
+        "https://i.postimg.cc/wjSVZQMN/Whats-App-Image-2022-09-23-at-21-52-18.jpg",
       name: "Chhavi Gyanani",
       review:
         "I had 4 tattoo from 97tattoo,n this is the best experience I ever had ,the quality of piece is beyond my expectations, the way Jai bhaiya treats their customers!! Absolutely amazing.",

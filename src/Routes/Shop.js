@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Button, Modal, Tabs, Tab } from "react-bootstrap";
 import styled from "styled-components/macro";
 import large from "../Assets/Images/products/large.jpg";
 import small from "../Assets/Images/products/small.jpg";
@@ -7,11 +7,14 @@ import ConsultationModal from "../components/ConsultationModal";
 
 const Shop = () => {
   const [show, setShow] = useState(false);
+  const [showDetails, setShowDetails] = useState({ details: {}, show: false });
   const [num, setNum] = useState(0);
 
   const modalHandler = () => {
-    setShow(true);
-    setNum(Math.random());
+    setTimeout(() => {
+      setShow(true);
+      setNum(Math.random());
+    }, 1000);
   };
 
   const products = [
@@ -20,12 +23,34 @@ const Shop = () => {
       name: "Tattoo Butter Large",
       image: large,
       price: "₹799",
+      ingredients: [
+        "beeswax",
+        "cocoa butter",
+        "jojoba oil",
+        "coconut oil",
+        "sweet almond oil",
+        "olive oil",
+        "lavender oil",
+        "tea tree oil",
+      ],
+      weight: "50gm / 1.76oz",
     },
     {
       id: Math.random(),
       name: "Tattoo Butter Small",
       image: small,
       price: "₹499",
+      ingredients: [
+        "beeswax",
+        "cocoa butter",
+        "jojoba oil",
+        "coconut oil",
+        "sweet almond oil",
+        "olive oil",
+        "lavender oil",
+        "tea tree oil",
+      ],
+      weight: "05oz / 15ml",
     },
   ];
   return (
@@ -95,9 +120,9 @@ const Shop = () => {
                     position: absolute;
                     transition: margin 0.5s;
                   `}
-                  onClick={modalHandler}
+                  onClick={() => setShowDetails({ show: true, details: item })}
                 >
-                  Checkout
+                  See Details
                 </Button>
               </div>
               <ProductHeading>{item.name}</ProductHeading>
@@ -106,6 +131,80 @@ const Shop = () => {
           );
         })}
       </Row>
+      <Modal
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        show={showDetails.show}
+        onHide={() => setShowDetails({ details: {}, show: false })}
+        css={`
+          font-family: poppins;
+        `}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title
+            id="contained-modal-title-vcenter"
+            css={`
+              font-weight: bolder;
+            `}
+          >
+            {showDetails.details?.name}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Tabs
+            variant="tabs"
+            defaultActiveKey="description"
+            css={`
+              text-transform: uppercase;
+              font-weight: bolder;
+
+              .nav-link {
+                color: grey;
+              }
+            `}
+          >
+            <Tab eventKey="description" title="Description">
+              <p className="mt-3 mb-0">
+                <span className="fw-bold">Weight : </span>
+                {showDetails.details?.weight}
+              </p>
+              <p className="mb-0">
+                <span className="fw-bold">Price : </span>
+                {showDetails.details?.price}
+              </p>
+              <p>For More Details Please Consult With Tattoo Artist.</p>
+            </Tab>
+            <Tab eventKey="ingredients" title="Ingredients">
+              <ul className="mt-3">
+                {showDetails.details?.ingredients?.map((item, index) => {
+                  return (
+                    <li
+                      key={index}
+                      css={`
+                        font-size: 14px;
+                        text-transform: uppercase;
+                      `}
+                    >
+                      {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            </Tab>
+          </Tabs>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="outline-dark"
+            onClick={() => {
+              setShowDetails({ details: {}, show: false });
+              modalHandler();
+            }}
+          >
+            Checkout
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <ConsultationModal show={show} num={num} />
     </Container>
   );
